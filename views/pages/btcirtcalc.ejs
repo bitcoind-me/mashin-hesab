@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta id="viewportelem" name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ماشین‌حساب تبدیل تومان به ساتوشی و بیت‌کوین و برعکس" />
   <meta property="og:image" content="https://bitcoind.me/assets/images/calculator-share-card.png" />
   <meta property="og:image:type" content="image/png" />
@@ -151,6 +151,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+      if (screen.height < 670) {
+        var mvp = document.getElementById("viewportelem");
+        mvp.setAttribute("content", "width=device-width,initial-scale=.9");
+      }
+    </script>
 
     <script type="text/javascript">
       var _lastupdate = "<%= _param_lastupdate %>"
